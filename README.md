@@ -1,14 +1,14 @@
-# Earnswap V2 Subgraph
+# Gainswap V2 Subgraph
 
-[Earnswap](https://earnswap.org/) is a decentralized protocol for automated token exchange on Ethereum.
+[Gainswap](https://gainswap.org/) is a decentralized protocol for automated token exchange on Ethereum.
 
-This subgraph dynamically tracks any pair created by the earnswap factory. It tracks of the current state of Earnswap contracts, and contains derived stats for things like historical data and USD prices.
+This subgraph dynamically tracks any pair created by the gainswap factory. It tracks of the current state of Gainswap contracts, and contains derived stats for things like historical data and USD prices.
 
 - aggregated data across pairs and tokens,
 - data on individual pairs and tokens,
 - data on transactions
 - data on liquidity providers
-- historical data on Earnswap, pairs or tokens, aggregated by day
+- historical data on Gainswap, pairs or tokens, aggregated by day
 
 ## Running Locally
 
@@ -16,13 +16,13 @@ Make sure to update package.json settings to point to your own graph account.
 
 ## Queries
 
-Below are a few ways to show how to query the earnswap-subgraph for data. The queries show most of the information that is queryable, but there are many other filtering options that can be used, just check out the [querying api](https://thegraph.com/docs/graphql-api). These queries can be used locally or in The Graph Explorer playground.
+Below are a few ways to show how to query the gainswap-subgraph for data. The queries show most of the information that is queryable, but there are many other filtering options that can be used, just check out the [querying api](https://thegraph.com/docs/graphql-api). These queries can be used locally or in The Graph Explorer playground.
 
 ## Key Entity Overviews
 
-#### EarnswapFactory
+#### GainswapFactory
 
-Contains data across all of Earnswap V2. This entity tracks important things like total liquidity (in ETH and USD, see below), all time volume, transaction count, number of pairs and more.
+Contains data across all of Gainswap V2. This entity tracks important things like total liquidity (in ETH and USD, see below), all time volume, transaction count, number of pairs and more.
 
 #### Token
 
@@ -34,7 +34,7 @@ Contains data on a specific pair.
 
 #### Transaction
 
-Every transaction on Earnswap is stored. Each transaction contains an array of mints, burns, and swaps that occured within it.
+Every transaction on Gainswap is stored. Each transaction contains an array of mints, burns, and swaps that occured within it.
 
 #### Mint, Burn, Swap
 
@@ -42,13 +42,13 @@ These contain specifc information about a transaction. Things like which pair tr
 
 ## Example Queries
 
-### Querying Aggregated Earnswap Data
+### Querying Aggregated Gainswap Data
 
-This query fetches aggredated data from all earnswap pairs and tokens, to give a view into how much activity is happening within the whole protocol.
+This query fetches aggredated data from all gainswap pairs and tokens, to give a view into how much activity is happening within the whole protocol.
 
 ```graphql
 {
-  earnswapFactories(first: 1) {
+  uniswapFactories(first: 1) {
     pairCount
     totalVolumeUSD
     totalLiquidityUSD

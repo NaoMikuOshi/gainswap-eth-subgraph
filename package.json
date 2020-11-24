@@ -1,16 +1,16 @@
 {
-  "name": "earnswap-eth-subgraph",
+  "name": "gainswap-eth-subgraph",
   "version": "1.0.0",
-  "repository": "https://github.com/earnswap/earnswap-eth-subgraph",
+  "repository": "https://github.com/gainswap-protocol/gainswap-eth-subgraph",
   "license": "GPL-3.0-or-later",
   "scripts": {
     "codegen": "graph codegen --output-dir src/types/",
     "build": "graph build",
-    "create-local": "graph create earnswap/info --node http://127.0.0.1:8020",
-    "deploy-local": "graph deploy earnswap/info --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
-    "deploy": "graph deploy earnswap/info --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug --access-token $GRAPH_ACCESS_TOKEN",
-    "deploy-staging": "graph deploy earnswap/info /Uniswap --ipfs https://api.staging.thegraph.com/ipfs/ --node https://api.staging.thegraph.com/deploy/",
-    "watch-local": "graph deploy earnswap/info --watch --debug --node http://127.0.0.1:8020/ --ipfs http://localhost:5001"
+    "create-local": "graph create gainswap-protocol/info --node http://127.0.0.1:8020",
+    "deploy-local": "graph deploy gainswap-protocol/info --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
+    "deploy": "graph deploy gainswap-protocol/info --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug --access-token $GRAPH_ACCESS_TOKEN",
+    "deploy-staging": "graph deploy gainswap-protocol/info /Uniswap --ipfs https://api.staging.thegraph.com/ipfs/ --node https://api.staging.thegraph.com/deploy/",
+    "watch-local": "graph deploy gainswap-protocol/info --watch --debug --node http://127.0.0.1:8020/ --ipfs http://localhost:5001"
   },
   "devDependencies": {
     "@graphprotocol/graph-cli": "^0.16.0",

@@ -1,6 +1,6 @@
 specVersion: 0.0.2
-description: Earnswap info subgraph.
-repository: https://github.com/earnswap/earnswap-eth-subgraph
+description: Gainswap info subgraph.
+repository: https://github.com/gainswap-protocol/gainswap-eth-subgraph
 schema:
   file: ./schema.graphql
 dataSources:
